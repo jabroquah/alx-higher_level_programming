@@ -5,4 +5,5 @@ class Rectangle:
     """
     A simple rectangle
     """
+
     pass
