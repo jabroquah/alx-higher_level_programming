@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""
-Rectangle class
-"""
+""" Rectangle class """
 
 
-class Rectangleo:
 
+class Rectangle:
     """
     A simple rectangle
     """
