@@ -1,29 +1,24 @@
-#!/usr/bin/python3
-"""
-Module composed by a function that prints 2 new lines after ".?:" characters
+s program takes a text and search the delimitors (?, : and .)
+if find this characters insert two new lines after this delimitors
+an print the result.
 """
 
 
 def text_indentation(text):
-    """ Function that prints 2 new lines after ".?:" characters
-    Args:
-        text: input string
-    Returns:
-        No return
-    Raises:
-        TypeError: If text is not a string
     """
+    text_indentation: Insert two new lines after the delimitors ?, : and .
+    After that print the result.
+     Args:
+      - text: str
+    """
+    if not isinstance(text, str):
+        raise TypeError('text must be a string')
 
-    if type(text) is not str:
-        raise TypeError("text must be a string")
+    delimitors = '.:?'
+    final = text
 
-    s = text[:]
-
-    for d in ".?:":
-        list_text = s.split(d)
-        s = ""
-        for i in list_text:
-            i = i.strip(" ")
-            s = i + d if s is "" else s + "\n\n" + i + d
-
-    print(s[:-3], end="")
+    for cut in delimitors:
+        final = f'{cut}\n\n'.join(
+            (list(map(lambda w: w.strip(' '), final.split(cut))))
+        )
+    print(final, end='')
