@@ -3,8 +3,9 @@
     A model for a square
 """
 
-
 from rectangle import Rectangle
+
+
 class Square(Rectangle):
     """
         A square class
