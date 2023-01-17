@@ -154,14 +154,14 @@ class Rectangle(Base):
         """
         return self.__height * self.__width
 
-    def display(self, x=get_x(), y=get_y()):
-        """
-            Prints the rectangle instance with the character #
-        """
-        for y in range(y):
-            for x in range(x):
-                print('#')
-            print('\n')
+    # def display(self, x=get_x(), y=get_y()):
+    #     """
+    #         Prints the rectangle instance with the character #
+    #     """
+    #     for y in range(y):
+    #         for x in range(x):
+    #             print('#')
+    #         print('\n')
 
     def __str__(self):
         """
