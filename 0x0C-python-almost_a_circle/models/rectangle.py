@@ -1,65 +1,30 @@
 #!/usr/bin/python3
-"""
-    A model for a rectangle
-"""
+"""Defines a rectangle class."""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """
-        A rectangle class
-        ...
-
-        Methods
-        -------
-        set_width(width) : None
-            sets width of rectangle
-        get_width(): int
-            returns the width of the rectangle
-        set_height(height): None
-            sets height of rectangle
-        get_height(): int
-            returns the height of the rectangle
-        set_x(x): None
-            sets the x-position of the rectangle
-        get_x(): int
-            returns the x-position of the rectangle
-        set_y(y): None
-            sets the y-position of the rectangle
-        get_y(): int
-            returns the y-position of the rectangle
-        area: int
-            returns the area of the rectangle
-        display: None
-            prints the rectangle size using character #
-    """
+    """Represent a rectangle."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Initialize a new Rectangle.
+        Args:
+            width (int): The width of the new Rectangle.
+            height (int): The height of the new Rectangle.
+            x (int): The x coordinate of the new Rectangle.
+            y (int): The y coordinate of the new Rectangle.
+            id (int): The identity of the new Rectangle.
+        Raises:
+            TypeError: If either of width or height is not an int.
+            ValueError: If either of width or height <= 0.
+            TypeError: If either of x or y is not an int.
+            ValueError: If either of x or y < 0.
         """
-        Parameters
-        ----------
-        width: int
-            width of the rectangle
-        height: int
-            height of the rectangle
-        x: int, optional
-            x-position of the rectangle (default = 0)
-        y: int, optional
-            y-position of the rectangle (default = 0)
-        id: int, optional
-            id of the rectangle (default = None)
-
-        Raises
-        ------
-        ValueError: if x or y is < 0, or width or height <= 0
-        TypeError: if input is not an integer
-        """
-        super().__init__(self, id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
-
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
